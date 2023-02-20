@@ -1,137 +1,63 @@
-// const star = 12;
-// let price;
-// if (star === 1) {
-//     price = 20;
-// } else if (star === 2) {
-//     price = 30;
-// } else if (star === 3) {
-//     price = 50;
-// } else if (star === 4) {
-//     price = 70;
-// } else if (star === 5) {
-//     price = 120;
-// } else {
-//     console.log('такого немає');
-// }
-
-// const star = 5;
-// let price;
-// switch (star) {
-//     case 1:
-//         price = 20;
-//         break;
-//     case 2:
-//         price = 30;
-//         break;
-//     case 3:
-//         price = 50;
-//         break;
-//     case 4:
-//         price = 70;
-//         break;
-//     case 5:
-//         price = 120;
-//         break;
-//     default:
-//         console.log('такого немає');
-// }
-// console.log(price);
-
-// function checkPassword(password) {
-//     const ADMIN_PASSWORD = "jqueryismyjam";
-//     let message;
-  
-//     switch (password) {
-//       case password === null:
-//       message = "Canceled by user!";
-//       break;
-//       case password === ADMIN_PASSWORD:
-//       message = "Welcome!";
-//       break;
-//       default: message = "Access denied, wrong password!";
-//     }
-// const res = checkPassword(null)
-// console.log(res);
-
-// const star = 2;
-// let price;
-// switch (star) {
-//     case 1: // так робиться "або" \\
-//     case 2:
-//         price = 20;
-//         break;
-//     case 3:
-//     case 4:
-//         price = 50;
-//         break;
-//     case 4:
-//         price = 70;
-//         break;
-//     case 5:
-//         price = 120;
-//         break;
-//     default:
-//         console.log('такого немає');
-// }
-// console.log(price);
-
-//==================Цикл for=========
-
-// for (let i = 0; i < 5; i += 1) {
-//     console.log(i);
-// }
-
-//задача
-
-// const minSalary = 500;
-// const maxSalary = 5000;
-// const employees = 10;
-// let totalSalary = 0;
-
-// for (let i = 0; i < employees; i += 1) {
-//     const salary = Math.round(Math.random() * (maxSalary - minSalary) + minSalary);
-//     console.log(`ЗП работника номер ${i} - ${salary} `);
-// }
-//задача2
-
-// const min = 0;
-// const max = 20;
+// Задача - перебюрати і додати масив
+// const cart = [54, 28, 105, 70, 92, 120, 78, 97, 988];
 // let total = 0;
-// // фор от min до max з кроком 1
-// for (let i = min; i <= max; i += 1) {
-//     // провіряємо залишов від діленння
-//     if (i % 2 !== 0) {
-//         console.log('не парне', i);
-//         continue; //пропускає ітерацію
+
+// for (let i = 0; i < cart.length; i+=1) {
+//     console.log (cart[i])
+//     total += cart[i]
+
+// }
+// for (const carts of cart) {
+// total += carts
+// }
+// console.log("сумма", total);
+
+// задача 2 - перебрати і просумувати парні числа масиву
+
+// const numbers = [54, 28, 105, 70, 92, 120, 77, 97, 981, 10, 16, 260];
+// let total = 0;
+
+// for (let i = 0; i < numbers.length; i+=1) {
+//     console.log(numbers[i]);
+//     if (numbers[i] % 2 === 0){
+//         console.log('це парне число');
+//         total += numbers[i];
 //     }
-//     console.log('парне', i);
-//     total += i;
+
 // }
-// console.log('сума парних', total);
+// або через фор оф
 
-// задача 3
-
-// let totalSpent = 30000;
-// let payment = 500;
-// let discount = 0;
-// if (totalSpent < 100) {
-//     console.log('Не партнер, скидка 0%');
-// } else if (totalSpent >= 100 && totalSpent < 1000) {
-//     console.log('Бронзовий партнер, скидка 2%');
-//     discount = 0.02;
-// } else if (totalSpent >= 1000 && totalSpent < 5000) {
-//     console.log('Срібний партнер, скидка 5%');
-//     discount = 0.05;
-// } else {
-//     console.log('Золотий партнер, скидка 10%');
-//     discount = 0.1;
+// for (const number of numbers) {
+//     if (number % 2 === 0){
+//          console.log('це парне число', number);
+//           total += number;
+        
+//         }
+//     else {
+        console.log("не парпні", number);
+//     }
+    
 // }
-// payment = payment - payment * discount;
 
-// console.log(`Оформляємо замовлення на суму ${payment} зі знижкою ${discount * 100}%`);
-
-// totalSpent += payment;
-
-// console.log(`Загальна сума потрачених грошей в магазині: ${totalSpent} `);
-
-
+// console.log("сумма парних", total);
+// function formatMessage(message, maxLength) {
+//     let result;
+//   if(message.length <= maxLength) {
+//     result = message;
+//   }
+//     else if (message.length > maxLength) {
+//     result = message.slice(0, maxLength) + "..." ;
+  
+//   }
+// //    let result = message.length <= maxLength ? result = message : result = message.slice(0, maxLength) + "..." ;
+  
+    
+    
+//     return result;
+//   }
+//   formatMessage("Curabitur ligula sapien", 16)
+//   formatMessage("Curabitur ligula sapien", 23)
+//   formatMessage("Vestibulum facilisis purus nec", 20)
+//   formatMessage("Vestibulum facilisis purus nec", 30)
+//   formatMessage("Nunc sed turpis a felis in nunc fringilla", 15)
+//   formatMessage("Nunc sed turpis a felis in nunc fringilla", 41)
